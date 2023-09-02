@@ -13,11 +13,11 @@ const pool=createPool({
 })
 
 app.get('/',(req,res)=>{
-    res.send("hola edmundo")
+    res.send("hola edmundo dsfds")
 })
 
 app.get('/ping',async (req,res)=>{
-    const result=await pool.query("select now()")
+    const result=await pool.query("select now(),'guillem'")
     res.json(result[0])
 
 })

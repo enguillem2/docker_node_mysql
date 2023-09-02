@@ -11,6 +11,8 @@ services:
       - 3306:3306
   app:
     build: .
+    volumes:
+      - .:/myapp
     depends_on:
       - mysqldb
     links:
